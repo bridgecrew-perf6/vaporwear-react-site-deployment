@@ -1,0 +1,82 @@
+.babylonExperienceCanvas {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+.hotspot {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.hotspotText {
+    position: relative;
+    left: 50px;
+    top: -15px;
+    background: #EEEEEEAA;
+    border-radius: 50%;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.configuratorList {
+    pointer-events: all;
+    position: absolute;
+    left: 10%;
+    top: 25%;
+    display: inline;
+}
+
+.configurationOption {
+    max-height: 70px;
+    min-height: 70px;
+    max-width: 70px;
+    min-width: 70px;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EEEEEEAA;
+    padding: 4%;
+    margin: 2%;
+    border-radius: 20%;
+    transition: filter 300ms;
+}
+
+.configurationOption:hover {
+    filter: brightness(0.7);
+}
+
+.configurationOptionLink {
+    font-style: normal;
+    color: black;
+    pointer-events: none;
+}
+
+.configurationOptionChoiceList {
+    position: absolute;
+    left: 80px;
+    display: -webkit-flex;
+}
+
+.configurationChoice {
+    position: relative;
+    max-height: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    min-width: 40px;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EEEEEEAA;
+    padding: 4%;
+    margin: 2%;
+    border-radius: 50%;
+    transition: filter 300ms;
+}
+
+.configurationChoice:hover {
+    filter: brightness(0.7);
+}
