@@ -49,6 +49,10 @@ function BabylonExperience() {
     const [hotspot1Y, setHotspot1Y] = useState(0);
     const [hotspot1Alpha, setHotspot1Alpha] = useState(0);
 
+    const [hotspot2X, setHotspot2X] = useState(0);
+    const [hotspot2Y, setHotspot2Y] = useState(0);
+    const [hotspot2Alpha, setHotspot2Alpha] = useState(0);
+
     useEffect(() => {
         const resizeHandler = function () {
             setWidth(window.innerWidth);
@@ -79,10 +83,14 @@ function BabylonExperience() {
                         setHotspot0X(hotspotUpdate.x);
                         setHotspot0Y(hotspotUpdate.y);
                         setHotspot0Alpha(hotspotUpdate.visible ? 1 : 0);
-                    } else {
+                    } else if (hotspotUpdate.hotspotId === 1) {
                         setHotspot1X(hotspotUpdate.x);
                         setHotspot1Y(hotspotUpdate.y);
                         setHotspot1Alpha(hotspotUpdate.visible ? 1 : 0);
+                    } else if (hotspotUpdate.hotspotId === 2) {
+                        setHotspot2X(hotspotUpdate.x);
+                        setHotspot2Y(hotspotUpdate.y);
+                        setHotspot2Alpha(hotspotUpdate.visible ? 1 : 0);
                     }
                 });
                 
@@ -105,6 +113,7 @@ function BabylonExperience() {
 
                         setHotspot0Alpha(0);
                         setHotspot1Alpha(0);
+                        setHotspot2Alpha(0);
                     }
                 };
                 window.addEventListener("scroll", scrollHandler);
@@ -119,9 +128,12 @@ function BabylonExperience() {
             <h4 className="hotspotText" style={{ width: 250, height: 50 }}>Rare earth magnets</h4>
         </div>
         <div className="hotspot" style={{ left: hotspot1X - 15, top: hotspot1Y - 15, opacity: hotspot1Alpha, background: "#EEEEEEAA" }} >
-            <h4 className="hotspotText" style={{ width: 180, height: 50 }}>Minimal geometry</h4>
+            <h4 className="hotspotText" style={{ width: 200, height: 50 }}>Minimal geometry</h4>
         </div>
-        <div className="vaporwearExperienceUI" style={{ width: width, height: height, position: "relative", pointerEvents: "none" }}>
+        <div className="hotspot" style={{ left: hotspot2X - 15, top: hotspot2Y - 15, opacity: hotspot2Alpha, background: "#EEEEEEAA" }} >
+            <h4 className="hotspotText" style={{ width: 250, height: 50 }}>Allan please add details</h4>
+        </div>
+        <div className="vaporwearExperienceUI" style={{ width: width, height: height * 0.8, position: "relative", pointerEvents: "none" }}>
             <Configurator>
                 <ConfigurationOption optionName="Band" selectionName={ selected } onSelected={ setSelected }>
                     <ConfigurationOptionChoice imageName="./band_0.png" onClick={ () => { experience.setBandMaterial("band_0"); } } />
