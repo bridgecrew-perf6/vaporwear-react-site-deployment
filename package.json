@@ -1,5 +1,6 @@
 {
   "name": "vaporwear-react-site",
+  "homepage": "https://syntheticmagus.github.io/vaporwear-react-site-deployment/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
