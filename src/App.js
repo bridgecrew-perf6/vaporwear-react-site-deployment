@@ -1,5 +1,4 @@
 import './App.css';
-import Filler from './components/Filler';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Byline from './components/Byline';

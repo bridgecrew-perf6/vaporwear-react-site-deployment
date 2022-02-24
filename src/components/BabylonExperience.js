@@ -36,8 +36,6 @@ const CANVAS_NAME = "babylonExperienceCanvas";
 
 let experience;
 function BabylonExperience() {
-    const [width, setWidth] = useState(window.innerWidth);
-    const [height, setHeight] = useState(window.innerHeight);
     const [selected, setSelected] = useState("none");
     const [studs, setStuds] = useState(false);
 
@@ -54,12 +52,6 @@ function BabylonExperience() {
     const [hotspot2Alpha, setHotspot2Alpha] = useState(0);
 
     useEffect(() => {
-        const resizeHandler = function () {
-            setWidth(window.innerWidth);
-            setHeight(window.innerHeight);
-        };
-        window.addEventListener("resize", resizeHandler);
-
         const states = ["overall", "clasp", "face", "levitate", "configure"];
         let currentState = 0;
         
@@ -123,17 +115,17 @@ function BabylonExperience() {
     }, []);
 
     return <>
-        <canvas className={CANVAS_NAME} style={{ width: width, height: height }} />
+        <canvas className={CANVAS_NAME} />
         <div className="hotspot" style={{ left: hotspot0X - 15, top: hotspot0Y - 15, opacity: hotspot0Alpha, background: "#EEEEEEAA" }} >
-            <h4 className="hotspotText" style={{ width: 250, height: 50 }}>Rare earth magnets</h4>
+            <h4 className="hotspotText">Rare earth magnets</h4>
         </div>
         <div className="hotspot" style={{ left: hotspot1X - 15, top: hotspot1Y - 15, opacity: hotspot1Alpha, background: "#EEEEEEAA" }} >
-            <h4 className="hotspotText" style={{ width: 200, height: 50 }}>Minimal geometry</h4>
+            <h4 className="hotspotText">Minimal geometry</h4>
         </div>
         <div className="hotspot" style={{ left: hotspot2X - 15, top: hotspot2Y - 15, opacity: hotspot2Alpha, background: "#EEEEEEAA" }} >
-            <h4 className="hotspotText" style={{ width: 250, height: 50 }}>Allan please add details</h4>
+            <h4 className="hotspotText">Allan please add details</h4>
         </div>
-        <div className="vaporwearExperienceUI" style={{ width: width, height: height * 0.8, position: "relative", pointerEvents: "none" }}>
+        <div className="vaporwearExperienceUI">
             <Configurator>
                 <ConfigurationOption optionName="Band" selectionName={ selected } onSelected={ setSelected }>
                     <ConfigurationOptionChoice imageName="./band_0.png" onClick={ () => { experience.setBandMaterial("band_0"); } } />

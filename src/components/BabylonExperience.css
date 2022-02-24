@@ -1,7 +1,9 @@
 .babylonExperienceCanvas {
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
 }
 
 .hotspot {
@@ -13,20 +15,32 @@
 
 .hotspotText {
     position: relative;
-    left: 50px;
+    left: 30px;
     top: -15px;
+    width: min(200px, 4vw);
+    height: min(50px, 2vw);
+    font-size: calc(10px + 0.5vw);
     background: #EEEEEEAA;
     border-radius: 50%;
+    padding: calc(2.5vw + 2.5vh);
     display: -webkit-flex;
     align-items: center;
     justify-content: center;
+}
+
+.vaporwearExperienceUI {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    pointer-events: none;
 }
 
 .configuratorList {
     pointer-events: all;
     position: absolute;
     left: 10%;
-    top: 10%;
+    top: min(30%, calc(100% - 560px));
+    width: 90px;
     display: inline;
 }
 

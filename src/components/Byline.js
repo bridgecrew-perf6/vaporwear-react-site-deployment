@@ -20,10 +20,6 @@ class Byline extends React.Component {
             const normalizedOffset = Math.abs((position - (window.innerHeight / 2)) / (window.innerHeight / 2));
             this.setState({ opacity: 1 - Math.max(0, Math.min(1, normalizedOffset - 0.3)) });
         });
-
-        window.addEventListener("resize", () => {
-            this.container.height = window.innerHeight * 0.8;
-        });
     }
 
     render() {

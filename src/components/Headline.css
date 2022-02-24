@@ -1,12 +1,15 @@
 .headlineContainer {
     position: relative;
+    width: 100%;
+    height: 80vh;
     z-index: 1;
+    align-items: center;
 }
 
 .headlineImage {
     position: absolute;
-    left: 0px;
-    right: 0px;
+    left: 0%;
+    right: 0%;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -20,7 +23,13 @@
 }
 
 .headlineTitle {
-    padding-top: 200px;
-    font-size: 100px;
+    padding-top: 30vh;
+    color: #AAAAAACC;
+    font-size: calc(30px + 5vw);
     font-family: serif;
+}
+
+.headlineSubtitle {
+    color: #AAAAAACC;
+    font-size: calc(12px + 0.7vw);
 }
