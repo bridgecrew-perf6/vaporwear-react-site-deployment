@@ -39,7 +39,7 @@
     pointer-events: all;
     position: absolute;
     left: 10%;
-    top: min(30%, calc(100% - 560px));
+    top: max(0%, min(30%, calc(100% - 560px)));
     width: 90px;
     display: inline;
 }

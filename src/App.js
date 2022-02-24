@@ -3,7 +3,6 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Byline from './components/Byline';
 import Headline from './components/Headline';
-import Spacer from './components/Spacer';
 import BabylonExperience from './components/BabylonExperience';
 
 function App() {
@@ -15,7 +14,6 @@ function App() {
       <Byline text="Custom-machined screens for a near-frictionless surface with subatomic smoothness." textPosition="right" />
       <Byline text="Quantum metamaterial construction bends gravity waves for levitation in all virtual exhibitions and certain breezes." textPosition="left" />
       <BabylonExperience />
-      <Spacer height={100} />
       <Footer />
     </div>
   );
