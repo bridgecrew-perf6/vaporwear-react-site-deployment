@@ -30,7 +30,7 @@
 
 .vaporwearExperienceUI {
     width: 100%;
-    height: 80vh;
+    height: max(80vh, 630px);
     position: relative;
     pointer-events: none;
 }
@@ -39,7 +39,7 @@
     pointer-events: all;
     position: absolute;
     left: 10%;
-    top: max(0%, min(30%, calc(100% - 560px)));
+    top: max(0%, min(30%, calc(100% - 630px)));
     width: 90px;
     display: inline;
 }
