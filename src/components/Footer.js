@@ -20,7 +20,7 @@ function Footer() {
     return <>
         <div className="footerBar" style={{opacity: opacity}}>
             <img src="./vaporwear_logo.png" className="footerLogo" />
-            <p style={{ float: "right", color: "whitesmoke", paddingRight: 10 }}>COPYRIGHT LOLOLOL</p>
+            <p className="footerCopyright">COPYRIGHT LOLOLOL</p>
         </div>
     </>;
 }

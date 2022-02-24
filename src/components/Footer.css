@@ -3,7 +3,7 @@
     bottom: 0px;
     left: 0px;
     height: 50px;
-    width: 100%;
+    width: 100vw;
     background-color: black;
     z-index: 1;
 }
@@ -11,4 +11,10 @@
 .footerLogo {
     height: 100%;
     float: left;
+}
+
+.footerCopyright{
+    float: right;
+    color: whitesmoke;
+    padding-right: 10px;
 }

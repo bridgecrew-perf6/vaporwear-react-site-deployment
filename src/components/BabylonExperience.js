@@ -5,8 +5,8 @@ import "./BabylonExperience.css";
 function ConfigurationOptionChoice(props) {
     return (
         <div className="configurationChoice" onClick={ props.onClick }>
-            { props.choiceName && <h4>{ props.choiceName }</h4> }
-            { props.imageName && <img src={ props.imageName } style={{ borderRadius: 50, width: 40, height: 40 }} /> }
+            { props.choiceName && <h4 className="configurationName">{ props.choiceName }</h4> }
+            { props.imageName && <img src={ props.imageName } className="configurationImage" /> }
         </div>
     );
 }
