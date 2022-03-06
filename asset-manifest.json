@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/vaporwear-react-site-deployment/static/css/main.5adee758.css",
-    "main.js": "/vaporwear-react-site-deployment/static/js/main.2ffa0531.js",
+    "main.js": "/vaporwear-react-site-deployment/static/js/main.b280d5ce.js",
     "index.html": "/vaporwear-react-site-deployment/index.html",
     "main.5adee758.css.map": "/vaporwear-react-site-deployment/static/css/main.5adee758.css.map",
-    "main.2ffa0531.js.map": "/vaporwear-react-site-deployment/static/js/main.2ffa0531.js.map"
+    "main.b280d5ce.js.map": "/vaporwear-react-site-deployment/static/js/main.b280d5ce.js.map"
   },
   "entrypoints": [
     "static/css/main.5adee758.css",
-    "static/js/main.2ffa0531.js"
+    "static/js/main.b280d5ce.js"
   ]
 }
