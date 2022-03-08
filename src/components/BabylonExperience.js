@@ -99,6 +99,7 @@ function BabylonExperience() {
                             setConfigurationOptionsOpacity(1);
                         }
                     }
+                    opacityAnimation();
                 });
                 
                 const scrollHandler = function () {
