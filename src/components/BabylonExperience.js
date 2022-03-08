@@ -51,6 +51,8 @@ function BabylonExperience() {
     const [hotspot2Y, setHotspot2Y] = useState(0);
     const [hotspot2Alpha, setHotspot2Alpha] = useState(0);
 
+    const [configurationOptionsOpacity, setConfigurationOptionsOpacity] = useState(0);
+
     useEffect(() => {
         const states = ["overall", "clasp", "face", "levitate", "configure"];
         let currentState = 0;
@@ -83,6 +85,19 @@ function BabylonExperience() {
                         setHotspot2X(hotspotUpdate.x);
                         setHotspot2Y(hotspotUpdate.y);
                         setHotspot2Alpha(hotspotUpdate.visible ? 1 : 0);
+                    }
+                });
+
+                experience.addEventListener("configurationOptionsLoaded", () => {
+                    let opacity = 0;
+                    const opacityAnimation = () => {
+                        if (opacity < 1) {
+                            opacity += 0.025;
+                            setConfigurationOptionsOpacity(opacity);
+                            setTimeout(opacityAnimation, 30);
+                        } else {
+                            setConfigurationOptionsOpacity(1);
+                        }
                     }
                 });
                 
@@ -125,7 +140,7 @@ function BabylonExperience() {
         <div className="hotspot" style={{ left: hotspot2X - 15, top: hotspot2Y - 15, opacity: hotspot2Alpha, background: "#EEEEEEAA" }} >
             <h4 className="hotspotText">Allan please add details</h4>
         </div>
-        <div className="vaporwearExperienceUI">
+        <div className="vaporwearExperienceUI" style={{ opacity: configurationOptionsOpacity }}>
             <Configurator>
                 <ConfigurationOption optionName="Band" selectionName={ selected } onSelected={ setSelected }>
                     <ConfigurationOptionChoice imageName="./band_0.png" onClick={ () => { experience.setBandMaterial("band_0"); } } />
