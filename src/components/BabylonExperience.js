@@ -66,7 +66,7 @@ function BabylonExperience() {
                 assetUrlWatch: "watch.glb",
                 assetUrlWatchStuds: "watch_studs.glb",
                 assetUrlWatchMaterials: "watch_materials.glb",
-                assetUrlEnvironmentTexture: "outdoor.env",
+                assetUrlEnvironmentTexture: "studio.env",
                 assetUrlDiamondFireTexture: "diamond_fire.env",
             }).then((result) => {
                 experience = result;
@@ -92,7 +92,7 @@ function BabylonExperience() {
                     let opacity = 0;
                     const opacityAnimation = () => {
                         if (opacity < 1) {
-                            opacity += 0.025;
+                            opacity += 0.05;
                             setConfigurationOptionsOpacity(opacity);
                             setTimeout(opacityAnimation, 30);
                         } else {
